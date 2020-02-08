@@ -7,5 +7,6 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 public class Source {
-    public static HashMap<MovieGenre, LinkedList<Movie>> movies;
+    public static HashMap<MovieGenre, LinkedList<Movie>> movies = new HashMap<>();
+
 }

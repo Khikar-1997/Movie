@@ -16,11 +16,12 @@ public class Initializer {
         System.out.println("Please Enter the Genres(DRAMA,FANTASY,HORROR,COMEDY,THRILLER,ANIMATION)");
         String genres = scanner.nextLine();
         String[] genresOfMyMovie = genres.split(",");
-        Set<MovieGenre> collectionOfGenres = Arrays.stream(genresOfMyMovie)
+        List<MovieGenre> collectionOfGenres = Arrays.stream(genresOfMyMovie)
                 .map((each) -> MovieGenre.valueOf(each))
-                .collect(Collectors.toSet());
-        Movie movie = new Movie(name, collectionOfGenres);
+                .collect(Collectors.toList());
+        Movie movie = new Movie(name,collectionOfGenres);
         return movie;
     }
+
 
 }
